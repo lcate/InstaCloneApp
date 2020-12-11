@@ -1,0 +1,33 @@
+<div class="all">
+  <div class="centered">
+    <h4>Enter Information about picture you want to add: </h4>
+    <form [formGroup]="pictureForm">
+
+      <h6 class="margin" for="picid">Id:</h6>
+      <input type="number" class="form-control" formControlName="id"
+      required>
+
+      <h6 class="margin" for="picid">Album Id:</h6>
+      <input type="number" class="form-control" formControlName="albumid">
+
+      <h6 class="margin" for="pictitle">Title:</h6>
+      <input type="text" class="form-control" formControlName="title">
+
+      <h6 class="margin" for="picurl">Url:</h6>
+      <input type="text" class="form-control" formControlName="url" required>
+
+      <h6 class="margin" for="picthumbnail">Thumbnail Url:</h6>
+      <input type="text" required class="form-control" formControlName="thumbnail">
+      <div class="row">
+        <div class="col-6">
+          <button (click)='onBack()' class="btn btn-info margin">
+            <i class="fa fa-chevron-left"></i> Back
+          </button>
+        </div>
+        <div class="col-6" style="text-align: end;">
+          <button  type="submit" (click)='onCreatePic()' class="btn btn-primary margin" [disabled]="pictureForm.invalid">Create</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

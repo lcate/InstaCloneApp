@@ -1,0 +1,59 @@
+
+    <nav aria-label="Page navigation example"  >
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <button class="btn btn-light" (click)='previous()' [disabled]="pageNumber===0"
+                    tabindex="-1">Previous</button>
+            </li>
+            <li class="page-item"><h3>{{pageNumber+1}}</h3></li>
+            <li class="page-item">
+                <button class="btn  btn-light" (click)='next()'>Next</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div *ngIf='pictures'>
+        <div class="row">
+            <div class="card" [routerLink]="['/picture/create']">
+                <div class="card-header">
+                    <h6>New</h6>
+                </div>
+                <div class="addPhoto">
+                    <img class="card-img-top" src="./assets/add_photo.jpg" style.width.px={{imageWidth}}>
+                </div>
+                <div class="card-body centar">
+                    <h5 class="card-title">Add new picture</h5>
+                </div>
+            </div>
+
+            <div class="card" *ngFor='let picture of pictures' [routerLink]="['/picture', picture.id]">
+                <div class="card-header">
+                    <h6>Id: {{picture.id}}</h6>
+                </div>
+                <div class="slika">
+                    <img class="card-img-top" src={{picture.thumbnailUrl}} style.width.px={{imageWidth}}>
+                </div>
+                <div class="card-body centar">
+                    <h5 class="card-title">{{picture.title}}</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"><i class="fa fa-heart"></i> <i class="fa fa-comment"></i>
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <nav aria-label="Page navigation example"  >
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <button class="btn btn-light" (click)='previous()' [disabled]="pageNumber===0"
+                    tabindex="-1">Previous</button>
+            </li>
+            <li class="page-item"><h3>{{pageNumber+1}}</h3></li>
+            <li class="page-item">
+                <button class="btn  btn-light" (click)='next()'>Next</button>
+            </li>
+        </ul>
+    </nav>

@@ -1,0 +1,32 @@
+<div class="centered">
+  <div class="all">
+    <h4 style="margin-bottom: 5px;">Enter Information about picture you want to add: </h4>
+    <form [formGroup]="editForm">
+      <h6 class="margin" for="picid">Id</h6>
+      <input type="number" class="form-control" formControlName="id">
+
+      <h6  class="margin" for="picid">Album Id</h6>
+      <input type="number" class="form-control" formControlName="albumid">
+
+      <h6 class="margin" for="pictitle">Title</h6>
+      <input type="text" class="form-control" formControlName="title">
+
+      <h6 class="margin" for="picurl">Url</h6>
+      <input type="text" class="form-control" formControlName="url">
+
+      <h6 class="margin" for="picthumbnail">Thumbnail Url</h6>
+      <input type="text" class="form-control" formControlName="thumbnail">
+
+      <div class="row">
+        <div class="col-6">
+          <button (click)='onBack()' class="btn btn-info margin">
+            <i class="fa fa-chevron-left"></i> Back
+          </button>
+        </div>
+        <div class="col-6" style="text-align: end;">
+          <button type="submit" (click)='saveEdited()' class="btn btn-primary margin">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

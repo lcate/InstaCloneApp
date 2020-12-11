@@ -1,0 +1,38 @@
+<div class="all">
+    <div class="card" *ngIf='picturee'>
+        <div class="card-header">
+            <h3>{{pageTitle}} {{picturee.id}}</h3>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title" style="margin-top: 25px;"><b>Album id:</b> {{picturee.albumId}}</h5>
+                    <p class="card-text" style="margin-top: 100px;font-size: 20px;"><b>Title: </b>{{picturee.title}} </p>
+                    <p class="card-text" style="height: 170px;"><small class="text-muted"><b>Small picture,</b> see here: <a
+                                href="{{picturee.thumbnailUrl}}">{{picturee.thumbnailUrl}}</a></small></p>
+                    <div class="row" >
+                        <div class="col-4">
+                            <button (click)='onBack()' class="btn btn-info mt-auto">
+                                <i class="fa fa-chevron-left"></i> Back
+                            </button>
+                        </div>
+                        <div class="col-4"  style="text-align: center;">
+                            <button [routerLink]="['/picture/edit', picturee.id]" class="btn btn-warning mt-auto text-white align-self-end">
+                                <i class="fa fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="col-4"  style="text-align: end;">
+                            <button (click)='onDelete()' class="btn btn-danger mt-auto align-self-end">
+                                <i class="fa fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <img class="card-img"  src={{picturee.url}} alt="Card image cap">
+            </div>
+        </div>
+
+    </div>
+</div>

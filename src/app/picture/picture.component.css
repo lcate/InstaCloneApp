@@ -1,0 +1,53 @@
+nav{
+  margin-top: 10px;
+}
+.slika{
+  margin-top: 5px;
+  text-align: center;
+  
+} 
+h3{
+  text-align: center;
+  width: 35px;
+  color: antiquewhite;
+}
+.card{
+    margin: 1%;
+    opacity: 0.95;
+    cursor: pointer;
+}
+.centar{
+  text-align: center;
+
+}
+.addPhoto{
+  text-align: center;
+   margin-top: 50px;
+}
+i{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+
+@media (max-width:530px){
+  .card{
+    width: 98%;
+  }
+}
+
+@media (max-width:767px){
+  .card{
+    width: 47%;
+  }
+}
+@media (max-width:530px){
+  .card{
+    width: 98%;
+  }
+}
+@media (min-width:768px){
+  .card{
+    width: 31.3%;
+  }
+}
